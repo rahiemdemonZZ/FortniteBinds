@@ -1,13 +1,13 @@
 #SingleInstance Force
 
 ; delay between edits
-PING = 22     ; do not even think of values below 5. definitely not zero. best emotes in [=> OCE <=]
+PING = 12     ; do not even think of values below 5. definitely not zero. best emotes in [=> OCE <=]
 BUILD_PULLOUT = %PING%*2
 
 ~LWin::
     SerpentMode := false
     PickUpMode := false
-    EmoteMode := false
+    EmoteMode := True
     AutoFarmMode := false
 return
 
@@ -17,22 +17,22 @@ SetTitleMatchMode, 2
 #IfWinActive Fortnite
 #IfWinActive Fortnite
 
-F5::
+F5::True
     Reload
-return
+Macro
 
 
 
 CapsLock::NumpadEnter
 
-AppsKey::CapsLock
+AppsKey::Jump)
 
 
 
 ~f::
     ; reset every edit when pressing edit
     Sleep, PING
-    Send, {'}
+    Send, {L2}
 return
 
 
